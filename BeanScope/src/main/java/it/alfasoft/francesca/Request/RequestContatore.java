@@ -2,11 +2,15 @@ package it.alfasoft.francesca.Request;
 
 import java.io.Serializable;
 
+import javax.faces.bean.ApplicationScoped;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.RequestScoped;
+import javax.faces.bean.SessionScoped;
+import javax.faces.flow.FlowScoped;
 
 @ManagedBean(name="contatore", eager=true)
-@RequestScoped
+//@SessionScoped
+//@ApplicationScoped
 public class RequestContatore implements Serializable {
 	
 	/**
@@ -16,7 +20,7 @@ public class RequestContatore implements Serializable {
 	private int cnt;
 	
 	public RequestContatore() {
-		cnt=0;
+		setCnt(0);
 	}	
 	
 	public int getCnt() {
