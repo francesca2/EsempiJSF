@@ -15,12 +15,14 @@
 <h:body>
 
 <h:form>
-<h:selectOneMenu value="#{c.città}">
-<f:selectItem itemValue="Torino" itemLabel="TO"/>
-<f:selectItem itemValue="Roma" itemLabel="RM"/>
-<f:selectItem itemValue="Firenze" itemLabel="FI"/>
-</h:selectOneMenu>
+ <h:selectOneMenu value="#{c.città}">
+<!--<f:selectItem itemValue="Torino" itemLabel="TO"/>-->
+<!--<f:selectItem itemValue="Roma" itemLabel="RM"/>-->
+<!--<f:selectItem itemValue="Firenze" itemLabel="FI"/>-->
+<!--</h:selectOneMenu>-->
 
+<f:selectItems value="#{c.cities}"></f:selectItems>
+</h:selectOneMenu>
 <h:commandButton value="Invia" action="homeCliente"/>
 </h:form>
 </h:body>

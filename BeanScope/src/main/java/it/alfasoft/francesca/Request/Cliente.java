@@ -1,6 +1,8 @@
 package it.alfasoft.francesca.Request;
 
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
 
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
@@ -21,8 +23,13 @@ public class Cliente implements Serializable {
 	private String nome;
 	private String cognome;
 	private String città;
+	
+	private List<String> cities=new ArrayList();
 
 	public Cliente() {
+		this.cities.add("Torino");
+		this.cities.add("Roma");
+		this.cities.add("Napoli");
 	}
 
 	public Cliente(String nome, String cognome, String città) {
@@ -58,6 +65,14 @@ public class Cliente implements Serializable {
 
 	public void setCittà(String città) {
 		this.città = città;
+	}
+
+	public List<String> getCities() {
+		return cities;
+	}
+
+	public void setCities(List<String> cities) {
+		this.cities = cities;
 	}
 	
 }
