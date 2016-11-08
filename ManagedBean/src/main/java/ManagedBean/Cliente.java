@@ -3,8 +3,13 @@ package ManagedBean;
 import java.io.Serializable;
 
 import javax.faces.bean.ManagedBean;
+import javax.faces.bean.SessionScoped;
+import javax.faces.bean.ViewScoped;
 
-@ManagedBean
+//@ManagedBean //annotazione per dichiarare che è un bean
+//@ManagedBean(name="c") //se voglio nominare la classe
+@ManagedBean(name="c", eager=true) //gli dico di usare il metodo eager per prendere i dati
+@SessionScoped //anotazione per dichiarare lo scope del bean che di default è request
 public class Cliente implements Serializable {
 
 	/**
