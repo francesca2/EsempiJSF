@@ -10,8 +10,16 @@
 
 </h:head>
 
+<h1>Contatore</h1>
+
 <h:body>
 
+Valore = #{contatore.cnt};
+
+<h:form>
+<h:commandButton value="Incrementa" action="#{contatore.incrementa()}"/>
+
+</h:form>
 </h:body>
 
 </html>
