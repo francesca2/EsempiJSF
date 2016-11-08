@@ -13,8 +13,17 @@
 <h:body>
 
 <h2>
-città: #{c.città}
+Città: #{c.città}
 </h2>
+
+<h2>
+Squadre:
+</h2>
+<ol>
+<ui:repeat var="temp" value="#{c.squadreScelte}">
+<li>#{temp}</li>
+</ui:repeat>
+</ol>
 
 </h:body>
 

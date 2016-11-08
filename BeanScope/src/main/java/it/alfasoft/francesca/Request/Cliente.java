@@ -23,20 +23,20 @@ public class Cliente implements Serializable {
 	private String nome;
 	private String cognome;
 	private String città;
+	private String squadra;
 	
-	private List<String> cities=new ArrayList();
+	private List<String> cities=new ArrayList<String>();
+	private List<String> squadre=new ArrayList<String>();
+	private List<String> squadreScelte=new ArrayList<String>();
 
 	public Cliente() {
 		this.cities.add("Torino");
 		this.cities.add("Roma");
 		this.cities.add("Napoli");
-	}
-
-	public Cliente(String nome, String cognome, String città) {
-		super();
-		this.nome = nome;
-		this.cognome = cognome;
-		this.città = città;
+		this.squadre.add("Torino");
+		this.squadre.add("Roma");
+		this.squadre.add("Napoli");
+		
 	}
 
 	public String getNome() {
@@ -73,6 +73,30 @@ public class Cliente implements Serializable {
 
 	public void setCities(List<String> cities) {
 		this.cities = cities;
+	}
+
+	public String getSquadra() {
+		return squadra;
+	}
+
+	public void setSquadra(String squadra) {
+		this.squadra = squadra;
+	}
+
+	public List<String> getSquadre() {
+		return squadre;
+	}
+
+	public void setSquadre(List<String> squadre) {
+		this.squadre = squadre;
+	}
+
+	public List<String> getSquadreScelte() {
+		return squadreScelte;
+	}
+
+	public void setSquadreScelte(List<String> squadreScelte) {
+		this.squadreScelte = squadreScelte;
 	}
 	
 }

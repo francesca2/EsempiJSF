@@ -10,9 +10,9 @@
 
 </h:head>
 
-<h1>Menù a tendina</h1>
-
 <h:body>
+
+<h2>Menù a tendina</h2>
 
 <h:form>
  <h:selectOneMenu value="#{c.città}">
@@ -25,5 +25,24 @@
 </h:selectOneMenu>
 <h:commandButton value="Invia" action="homeCliente"/>
 </h:form>
+
+<h2>Radio buttons</h2>
+
+<h:form>
+ <h:selectOneRadio value="#{c.squadra}">
+<f:selectItems value="#{c.squadre}"></f:selectItems>
+</h:selectOneRadio>
+<h:commandButton value="Invia" action="homeCliente"/>
+</h:form>
+
+<h2>Check Box</h2>
+
+<h:form>
+ <h:selectManyCheckbox value="#{c.squadreScelte}">
+<f:selectItems value="#{c.squadre}"></f:selectItems>
+</h:selectManyCheckbox>
+<h:commandButton value="Invia" action="homeCliente"/>
+</h:form>
+
 </h:body>
 </html>
