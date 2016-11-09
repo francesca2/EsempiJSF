@@ -1,0 +1,29 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+
+<h:head>
+<title>Navigazione</title>
+</h:head>
+<h:body>
+<h1>Navigazione</h1>
+
+<h2>Come spostarsi da una pagina all'altra con i managedBean</h2>
+
+<h:form>
+ <h:selectOneMenu value="#{n.pagina}">
+<f:selectItem itemValue=" " itemLabel=" "/>
+<f:selectItem itemValue="paginaUno" itemLabel="Pagina Uno"/>
+<f:selectItem itemValue="paginaDue" itemLabel="Pagina Due"/>
+<f:selectItem itemValue="paginaTre" itemLabel="Pagina Tre"/>
+</h:selectOneMenu>
+
+<h:commandButton value="Invia" action="#{n.getPagina}"/>
+</h:form>
+
+</h:body>
+</html>
