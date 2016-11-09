@@ -1,0 +1,32 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+
+<h:head>
+<h1>Tabella studenti</h1>
+</h:head>
+
+<h:body>
+
+<h:dataTable value="#{data.studenti}" var="temp" border="1">
+<h:column>
+<f:facet name="header">Nome</f:facet>
+#{temp.nome}
+</h:column>
+<h:column>
+<f:facet name="header">Cognome</f:facet>
+#{temp.cognome}
+</h:column>
+<h:column>
+<f:facet name="header">Matricola</f:facet>
+#{temp.matricola}
+</h:column>
+</h:dataTable>
+
+</h:body>
+
+</html>
