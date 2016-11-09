@@ -13,7 +13,7 @@ public class EsempioManagedProperty implements Serializable {
 	 */
 	private static final long serialVersionUID = 1L;
 	
-	@ManagedProperty(value="#{secondo}")
+	@ManagedProperty(value="#{primo}")
 	private MessageService msgService;
 	
 	public EsempioManagedProperty(){
