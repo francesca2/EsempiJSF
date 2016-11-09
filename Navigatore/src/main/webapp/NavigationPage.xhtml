@@ -14,16 +14,30 @@
 
 <h2>Come spostarsi da una pagina all'altra con i managedBean</h2>
 
+<h:outputText value="#{n.msg}" />
+
 <h:form>
  <h:selectOneMenu value="#{n.pagina}">
-<f:selectItem itemValue=" " itemLabel=" "/>
-<f:selectItem itemValue="paginaUno" itemLabel="Pagina Uno"/>
-<f:selectItem itemValue="paginaDue" itemLabel="Pagina Due"/>
-<f:selectItem itemValue="paginaTre" itemLabel="Pagina Tre"/>
+<f:selectItem itemValue="" itemLabel="Seleziona Pagina"/>
+<f:selectItem itemValue="paginaUno" itemLabel="Uno"/>
+<f:selectItem itemValue="paginaDue" itemLabel="Due"/>
+<f:selectItem itemValue="paginaTre" itemLabel="Tre"/>
 </h:selectOneMenu>
 
-<h:commandButton value="Invia" action="#{n.getPagina}"/>
+<h:commandButton value="Invia" action="#{n.redirectPage()}"/>
 </h:form>
+
+<h2>Navigazione con h:button</h2>
+
+<h:button value="Uno" outcome="paginaUno"/><br/>
+<h:button value="Due" outcome="paginaDue"/><br/>
+<h:button value="Tre" outcome="paginaTre"/><br/>
+
+<h2>Navigazione con h:link</h2>
+
+<h:link value="Uno" outcome="paginaUno"/><br/>
+<h:link value="Due" outcome="paginaDue"/><br/>
+<h:link value="Tre" outcome="paginaTre"/><br/>
 
 </h:body>
 </html>
